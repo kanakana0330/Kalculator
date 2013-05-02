@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Kalculator</title>
+  <style>
+  /*
+  * reset
+  -----------------------*/
+  body,div,h1{
+    margin: 0;
+    padding: 0;
+  }
+  ul,ol,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  /*
+  * layout
+  -----------------------*/
+  body{
+    padding: 20px;
+    background-color: #eee;
+  }
+  #kalculator{
+    padding:10px;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  #monitor{
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin: 0 10px;
+  }
+  #monitor li{
+    height:2em;
+    line-height: 2em;
+    vertical-align: middle;
+    box-sizign:border-box;
+    padding:0 10px;
+    text-align: right;
+  }
+  #monitor li:first-child{
+    border-bottom:1px solid #eee;
+  }
+
+  #btns{
+    width:100%;
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #btns td{
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+  }
+  #btns div{
+    display: inline-block;;
+    border:2px solid #ddd;
+    box-sizing:border-box;
+    width:90%;
+    height:40px;
+    border-radius: 10px;
+    line-height: 40px;
+  }
+  #btns div:hover{
+    cursor: pointer;
+  }
+  #btns td[rowspan="2"] div{
+    height: 100px;
+    line-height: 100px;
+  }
+  #btns td[colspan="2"] div{
+    width: 95%;
+  }
+
+  </style>
+</head>
+<body>
+  <div id="kalculator">
+    <ul id="monitor">
+      <li id="monitor_functions"></li>
+      <li id="monitor_numbers"></li>
+    </ul>
+    <table id="btns">
+      <tr>
+        <td><div id="btn_clear">C</div></td>
+        <td><div id="btn_posiNega">+/-</div></td>
+        <td><div id="btn_division">÷</div></td>
+        <td><div id="btn_multiply">×</div></td>
+      </tr>
+      <tr>
+        <td><div id="btn_7">7</div></td>
+        <td><div id="btn_8">8</div></td>
+        <td><div id="btn_9">9</div></td>
+        <td><div id="btn_minus">-</div></td>
+      </tr>
+      <tr>
+        <td><div id="btn_4">4</div></td>
+        <td><div id="btn_5">5</div></td>
+        <td><div id="btn_6">6</div></td>
+        <td><div id="btn_plus">+</div></td>
+      </tr>
+      <tr>
+        <td><div id="btn_1">1</div></td>
+        <td><div id="btn_2">2</div></td>
+        <td><div id="btn_3">3</div></td>
+        <td rowspan="2"><div id="btn_equal">=</div></td>
+      </tr>
+      <tr>
+        <td colspan="2"><div id="btn_0">0</div></td>
+        <td><div id="btn_dot">.</div></td>
+      </tr>
+    </table>
+  </div>
+  <script src="kalculator.js"></script>
+</body>
+</html>
