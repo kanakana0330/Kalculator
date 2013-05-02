@@ -36,6 +36,10 @@
     equal_flg = 0;
     //0:数字を連続して入力する　1:上書き
     number_flg = 0;
+
+    //モニターの幅を取得
+    max = 15;
+    //max = parseInt((monitor_numbers.offsetWidth - 20) / 11);
   ;
 
   //1〜9の数字を押したときのメソッド
@@ -56,7 +60,7 @@
         number_flg = 0;
       }
     }
-    monitor_numbers.innerHTML = number_displayed;
+    returnNumber();
   }
 
   //0を押したときのメソッド
@@ -66,7 +70,7 @@
     }
     if(number_displayed !== '0'){
       number_displayed += arg;
-      monitor_numbers.innerHTML = number_displayed;
+      returnNumber();
     }
   }
 
@@ -78,7 +82,7 @@
     if(number_displayed !== '' && number_displayed.indexOf('.') == -1){
       if(number_displayed !== '.'){
         number_displayed += arg;
-        monitor_numbers.innerHTML = number_displayed;
+        returnNumber();
         number_flg = 0;
       }
     }
@@ -89,7 +93,7 @@
   if(equal_flg == 1){
     clearAll();
     number_displayed = result;
-    monitor_numbers.innerHTML = number_displayed;
+    returnNumber();
     }
 
     if(number_displayed !== ''){
@@ -100,7 +104,7 @@
         number_displayed = number_displayed.slice(1);     
       }
     }
-    monitor_numbers.innerHTML = number_displayed;
+    returnNumber();
   }
 
   //clear button を押したときのメソッド
@@ -225,9 +229,21 @@
     operation = '';
     number_flg = 0;
     equal_flg = 0;
-    monitor_numbers.innerHTML = number_displayed;
     monitor_functions.innerHTML = operation;
     number_cache.splice(0,2);
+    returnNumber();
+  }
+
+  //数字を表示させるメソッド
+  function returnNumber(){
+    if(number_displayed.length < max){
+      monitor_numbers.innerHTML = number_displayed;
+      monitor_numbers.style.background = '#ffffff'
+    } else {
+      monitor_numbers.style.background = '#ff0000'
+    }
+    
+    
   }
 
   //inputボタンを押したときの変数
