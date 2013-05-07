@@ -76,7 +76,7 @@
   */
   function inputZero(arg){
     //イコールを押した直後の処理
-    if(equal_flg == 1){
+    if(equal_flg === 1){
       clearAll();
     }
     // (+/-)を押した直後は数字を上書きする
@@ -101,7 +101,7 @@
       // (+/-)を押した直後は何もしない
       if(posiNega_flg !== 1){
         //number_displayedに既に'.'がない場合'.'を入れる
-        if(number_displayed !== '' && number_displayed.indexOf('.') == -1){
+        if(number_displayed !== '' && number_displayed.indexOf('.') === -1){
           //number_displayedの先頭が'.'にならないようにする
           if(number_displayed !== '.'){
             number_displayed += arg;
@@ -118,7 +118,7 @@
   */
   function input_posiNega(){
     //イコールを押した直後の処理
-    if(equal_flg == 1){
+    if(equal_flg === 1){
       clearAll();
       number_displayed = result;
       returnNumber();
@@ -160,7 +160,7 @@
   */
   function arithmetic(arg){
     var mark = arg;
-      if(equal_flg == 1){
+      if(equal_flg === 1){
         number_flg = 1;
         monitor_functions.innerHTML = mark;
         equal_flg = 0;
