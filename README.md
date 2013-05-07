@@ -1,5 +1,6 @@
-Kalculator -Kanako Calculator ♡-
-==========
+##♡ Kalculator ♡
+======
+Kanako Calculator 
 
 ##実装した機能
 ・四則計算  
@@ -11,4 +12,3 @@ Kalculator -Kanako Calculator ♡-
 ・デフォルトを空欄ではなく0に変更  
 ・(+/-)ボタンのロジック変更  
 ・キーバインディング追加  
-
