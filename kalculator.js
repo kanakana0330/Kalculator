@@ -28,7 +28,7 @@
     number_displayed = '',
     //計算する数字のキャッシュ
     number_cache = [],
-    //0:四則計算ボタンを押てない　1:四則計算ボタンを押した
+    //0:四則計算ボタンを押してない　1:四則計算ボタンを押した
     operation = '',
     //計算結果
     result = '',
@@ -60,10 +60,10 @@
       number_flg = 0;
       posiNega_flg = 0;
     } else { //連続入力
-      if (number_displayed !== '0') {//number_displayedが0以外なら連続入力
+      if (number_displayed !== '0') { //number_displayedが0以外なら連続入力
         number_displayed += arg;
         number_flg = 0;
-      }else {//number_displayedが0なら上書き
+      }else { //number_displayedが0なら上書き
         number_displayed = arg;
         number_flg = 0;
       }
@@ -266,6 +266,11 @@
   btn_division.addEventListener('click',input_division,false);
   btn_multiply.addEventListener('click',input_multiply,false);
   btn_posiNega.addEventListener('click',input_posiNega,false);
+
+  /*
+  * ロード時に初期化
+  */
+  clearAll();
 
 // console.log(number_displayed);
 // console.log(number_cache);
