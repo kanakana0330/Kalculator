@@ -1,6 +1,6 @@
 ##♡ Kalculator ♡
 ======
-Kanako Calculator 
+Kanako Calculator  
 http://kanakana0330.github.io/Kalculator/
 
 ##実装した機能
